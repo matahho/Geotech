@@ -461,7 +461,7 @@ class Module6(QWidget):
         dam [0 , 1+int(self.length.text())*3:] = float(self.Hb.text())
     
 
-        for i in range (400):
+        for i in range (200):
             dam = self.meanCalc(dam)
 
         forceInPlace = self.calcHp(dam)
