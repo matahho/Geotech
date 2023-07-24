@@ -24,7 +24,7 @@ class Module3(QWidget):
     def __init__(self, parent):
         
         super(QWidget, self).__init__(parent)
-        self.layout = QVBoxLayout(self)
+        self.layout = QHBoxLayout(self)
         
         
 
@@ -67,6 +67,15 @@ class Module3(QWidget):
         self.layout.addWidget(self.module3)
         
         self.setLayout(self.layout)
+          
+        self.logo = QLabel(self)
+        self.pixmap = QPixmap('./logo.PNG')
+        self.pixmap = self.pixmap.scaled(600,600) 
+        self.logo.setPixmap(self.pixmap)
+
+        #self.logo.resize(self.pixmap.width(),self.pixmap.height())
+        self.layout.addWidget(self.logo)
+
     
         self.whichRowsHasChanged = set()
     def cellChangedHandeler(self, item):
@@ -173,10 +182,10 @@ class Module3(QWidget):
         self.tableWidget.setRowCount(25)
         self.tableWidget.setColumnCount(8)
         for i in range (3):
-            self.tableWidget.setColumnWidth(i , 80)
+            self.tableWidget.setColumnWidth(i , 90)
 
         for i in range (3 , self.tableWidget.columnCount()):
-            self.tableWidget.setColumnWidth(i , 65)
+            self.tableWidget.setColumnWidth(i , 90)
         
         
 

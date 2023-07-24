@@ -41,7 +41,7 @@ class App(QMainWindow):
         self.tabs = QTabWidget()
         self.setCentralWidget(self.tabs)
         self.module2 = Module2(self)
-        
+        self.module3 = Module3(self)
         self.module6 = Module6(self)
         self.module7 = Module7(self)
         self.home = Home(self)
@@ -50,7 +50,7 @@ class App(QMainWindow):
         self.tabs.addTab(self.home , "Home")
         self.tabs.addTab(QWidget(),"Shallow Foundation")
         self.tabs.addTab(self.module2 , "Pile")
-        self.tabs.addTab(QWidget() ,"Liquefaction")
+        self.tabs.addTab(self.module3 ,"Liquefaction")
         self.tabs.addTab(QWidget() , "Settelment")
         self.tabs.addTab(QWidget() , "Retaining Wall")
         self.tabs.addTab(self.module6 , "Dam Uplift Force")
