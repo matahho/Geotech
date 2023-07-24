@@ -22,6 +22,7 @@ from matplotlib.widgets import Cursor
 from module7 import Module7
 from module6 import Module6
 from module5 import Module5
+from module4 import Module4
 from module3 import Module3
 from module2 import Module2
 from module1 import Module1
@@ -45,6 +46,7 @@ class App(QMainWindow):
         self.module1 = Module1(self)
         self.module2 = Module2(self)
         self.module3 = Module3(self)
+        self.module4 = Module4(self)
         self.module5 = Module5(self)
         self.module6 = Module6(self)
         self.module7 = Module7(self)
@@ -55,7 +57,7 @@ class App(QMainWindow):
         self.tabs.addTab(self.module1,"Shallow Foundation")
         self.tabs.addTab(self.module2 , "Pile")
         self.tabs.addTab(self.module3 ,"Liquefaction")
-        self.tabs.addTab(QWidget() , "Settelment")
+        self.tabs.addTab(self.module4 , "Settelment")
         self.tabs.addTab(self.module5 , "Retaining Wall")
         self.tabs.addTab(self.module6 , "Dam Uplift Force")
         self.tabs.addTab(self.module7 , "Stress Distribution")
