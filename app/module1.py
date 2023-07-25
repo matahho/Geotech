@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import QApplication, QLineEdit, QWidget, QFormLayout, QPushButton, QLabel, QMainWindow, QComboBox, \
-    QWidget, QHBoxLayout, QVBoxLayout, QGridLayout , QTabWidget , QToolButton , QMessageBox
+    QWidget, QHBoxLayout, QVBoxLayout, QGridLayout , QTabWidget , QToolButton , QMessageBox , QDesktopWidget
 from PyQt5.QtWidgets import QTableWidget, QTableWidgetItem, QGroupBox, QStackedLayout , QDialog , QErrorMessage , QToolTip
 from PyQt5.QtGui import QIntValidator, QDoubleValidator, QFont, QPalette, QColor , QPixmap , QCursor
 from PyQt5.QtCore import Qt,QSize 
@@ -578,6 +578,8 @@ class Module1(QWidget):
         self.choosingLayer()
         self.choosingLayerForWater()
         self.graphWindow = QDialog(self)
+        # screen_geometry = QDesktopWidget().availableGeometry()
+        # self.graphWindow.move(screen_geometry.right() - 500, screen_geometry.top())
         self.graphWindow.setWindowTitle("Graphs")
         self.graphWindowLayout = QGridLayout()
         self.graphWindow.setLayout(self.graphWindowLayout)

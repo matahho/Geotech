@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import QApplication, QLineEdit, QWidget, QFormLayout, QPushButton, QLabel, QMainWindow, QComboBox, \
-    QWidget, QHBoxLayout, QVBoxLayout, QGridLayout , QTabWidget , QMessageBox
+    QWidget, QHBoxLayout, QVBoxLayout, QGridLayout , QTabWidget , QMessageBox , QDesktopWidget
 from PyQt5.QtWidgets import QTableWidget, QTableWidgetItem, QGroupBox, QStackedLayout , QDialog , QErrorMessage , QToolButton
 from PyQt5.QtGui import QIntValidator, QDoubleValidator, QFont, QPalette, QColor , QPixmap
 from PyQt5.QtCore import Qt , QSize
@@ -800,10 +800,14 @@ class Module5(QWidget):
             layout.addWidget(table1, 0 ,0)
             layout.addWidget(table2, 1 ,0)
             
+            screen_geometry = QDesktopWidget().availableGeometry()
             
+            #dialog.move(screen_geometry.width() - 2 * dialog.width(),0)
+            dialog.move(screen_geometry.right() - 300, screen_geometry.top())
             dialog.setLayout(layout)
             dialog.setWindowTitle("Results")
             dialog.setFixedSize(dialog.sizeHint())
+
             dialog.exec_()
 
 
