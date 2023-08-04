@@ -179,8 +179,8 @@ class Module6(QWidget):
         self.K1.setFixedWidth(80)
         self.K1.setValidator(QDoubleValidator())
         self.K1.textChanged.connect(self.enButton)
-        self.K1.setPlaceholderText("s")        
-        K1Label = QLabel("K1 (s)")
+        self.K1.setPlaceholderText("m/s")        
+        K1Label = QLabel("K1 (m/s)")
         K1Label.setToolTip("ضریب نفوذپذیری لایه اول خاک")
         soilPart.addRow (K1Label , self.K1)
 
@@ -189,8 +189,8 @@ class Module6(QWidget):
         self.K2.setFixedWidth(80)
         self.K2.setValidator(QDoubleValidator())
         self.K2.textChanged.connect(self.enButton)
-        self.K2.setPlaceholderText("(s)")        
-        K2Label = QLabel("K2 (s)")
+        self.K2.setPlaceholderText("m/s")        
+        K2Label = QLabel("K2 (m/s)")
         K2Label.setToolTip("ضریب نفوذپذیری لایه دوم خاک")
         soilPart.addRow (K2Label , self.K2)
 
@@ -390,7 +390,7 @@ class Module6(QWidget):
 
         
         x = []
-        for i in range(len(force)):
+        for i in range(1 , len(force)+1):
             x.append (i)
         
         y = list (force)

@@ -1763,8 +1763,11 @@ class Module1(QWidget):
     
     def calculate_Sc_terzaghi (self , B , L ):
         try:
-            Sc = 1 + (0.3 * B / L)
-            return (Sc)
+            if L / B >= 5 :
+                return 1
+            else :
+                Sc = 1 + (0.3 * B / L)
+                return (Sc)
         except:
             raise Exception("L")
 
@@ -1775,8 +1778,11 @@ class Module1(QWidget):
 
     def calculate_Sgamma_terzaghi (self , B , L ):
         try:
-            Sgamma = 1 - (0.2 * B / L)
-            return (Sgamma)
+            if L / B >= 5 :
+                return 1
+            else :
+                Sgamma = 1 - (0.2 * B / L)
+                return (Sgamma)
         except:
             raise Exception("L")
 

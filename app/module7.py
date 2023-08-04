@@ -659,7 +659,7 @@ class Module7(QWidget):
 
         try:
             while (z <= float(self.maxExpextedDepth.text())):
-                delta = float(self.q_uniformLoad.text()) *(1 - 1 /(math.pow (math.pow(float(self.R_uniformLoad.text())/z ,2) , 1.5)))
+                delta = float(self.q_uniformLoad.text()) *(1 - (1 /(math.pow (math.pow(float(self.R_uniformLoad.text())/z ,2)+1 , 1.5))))
                 deltaArr.append(delta)
                 zArr.append(z)
 
