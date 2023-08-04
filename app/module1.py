@@ -1171,6 +1171,7 @@ class Module1(QWidget):
         self.B = QLineEdit()
         self.B.setValidator(QDoubleValidator())
         self.B.setPlaceholderText("meters")
+        self.B.setToolTip("عرض پی سطحی")
         self.B.textChanged.connect(self.enButton)
 
         # L
@@ -1184,7 +1185,7 @@ class Module1(QWidget):
         self.DBase = QLineEdit()
         self.DBase.setValidator(QDoubleValidator())
         self.DBase.setPlaceholderText("meters")
-        self.DBase.setToolTip("عمق استقرار پی")
+        self.DBase.setToolTip("عمق مدفون پی")
         self.DBase.textChanged.connect(self.enButton)
 
 
@@ -1321,7 +1322,7 @@ class Module1(QWidget):
         QhLabel.setToolTip("بار افقی")
         self.loadingPart.addRow(QhLabel, self.Qh)
 
-        QvLabel = QLabel (u"Q\u2095(ton)")
+        QvLabel = QLabel (u"Q\u1D65(ton)")
         QvLabel.setToolTip("بار عمودی")
         self.loadingPart.addRow(QvLabel, self.Qv)
         self.loadingBox.setLayout(self.loadingPart)
