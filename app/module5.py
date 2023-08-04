@@ -806,7 +806,7 @@ class Module5(QWidget):
             dialog.move(screen_geometry.right() - 300, screen_geometry.top())
             dialog.setLayout(layout)
             dialog.setWindowTitle("Results")
-            dialog.setFixedSize(dialog.sizeHint())
+            #dialog.setFixedSize(dialog.sizeHint())
 
             dialog.exec_()
 

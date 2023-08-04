@@ -49,12 +49,19 @@ class Module3(QWidget):
         #                                 color: #19A7CE;
         #                             }
         # """)
+        self.module3Help = QToolButton()
+        self.module3Help.setText("Help")  
+        self.module3Help.setIconSize(QSize(20 , 20))
+        self.module3Help.clicked.connect(self.module3HelpFunction)
+
+
 
 
 
 
         # Create first tab
-        self.module3.layout = QGridLayout(self)
+        self.module3.layout = QVBoxLayout(self)
+        self.module3.layout.addWidget(self.module3Help, alignment = Qt.AlignRight)
 
 
         self.input_datas (self.module3.layout)
@@ -355,7 +362,7 @@ class Module3(QWidget):
 
 
 
-        layout.addLayout(verticalLayout, 1, 0)
+        layout.addLayout(verticalLayout)
     
 
     def module3HelpFunction(self):

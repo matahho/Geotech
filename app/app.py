@@ -61,7 +61,7 @@ class App(QMainWindow):
         self.tabs.addTab(self.module5 , "Retaining Wall")
         self.tabs.addTab(self.module6 , "Dam Uplift Force")
         self.tabs.addTab(self.module7 , "Stress Distribution")
-        self.tabs.setTabPosition(QTabWidget.West)
+        #self.tabs.setTabPosition(QTabWidget.West)
         self.tabs.setTabShape(QTabWidget.Rounded)   
 
 
@@ -75,6 +75,7 @@ class App(QMainWindow):
     
         
         self.show()
+        
         self.showFullScreen()
         self.setFixedSize(self.size())
 

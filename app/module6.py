@@ -253,7 +253,7 @@ class Module6(QWidget):
         layout.addLayout(gridLayout)
     
     def checkHtandHb(self):
-        if float(self.Ht.text()) > float(self.Hb.text()):
+        if float(self.Ht.text()) < float(self.Hb.text()):
             raise Exception ("مقدار Ht , Hb نامعتبر است")
         else :
             if float(self.Ht.text()) < 0 or float(self.Hb.text()) < 0 :
@@ -371,7 +371,8 @@ class Module6(QWidget):
         
     def calcHp (self , matrix):
         Hp = np.sum(matrix, axis=0)
-        tension = 10 * Hp 
+        zirSad = Hp[1+int(self.length.text())*2:1+int(self.length.text())*3]
+        tension = 10 * zirSad 
         DeltaX = 1 
         forceInPlace = DeltaX * tension
         return forceInPlace
@@ -463,6 +464,9 @@ class Module6(QWidget):
 
         for i in range (200):
             dam = self.meanCalc(dam)
+        
+
+
 
         forceInPlace = self.calcHp(dam)
         
