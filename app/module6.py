@@ -238,7 +238,7 @@ class Module6(QWidget):
         self.Hb.textChanged.connect(self.enButton)
         self.Hb.setPlaceholderText("m")
         HbLabel = QLabel("Hb (m) ")
-        HbLabel.setToolTip(" ")
+        HbLabel.setToolTip("هد آب  پایین دست")
         WaterPart.addRow (HbLabel , self.Hb)
 
 

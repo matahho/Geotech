@@ -72,8 +72,8 @@ class App(QMainWindow):
         self.tabs.setTabToolTip(3, 'Liquefaction Calculation')
         self.tabs.setTabToolTip(4, 'Settelment Calculation')
         
-    
-        
+        self.setWindowFlags(Qt.WindowTitleHint | Qt.WindowMinimizeButtonHint | Qt.WindowCloseButtonHint)
+
         self.show()
         
         self.showFullScreen()

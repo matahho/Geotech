@@ -153,7 +153,7 @@ class Module4(QWidget):
         self.foundationDimention_Part.addRow(tLabel , self.t)
 
         EfLabel = QLabel(u"Eᶠ (ton/m\N{SUPERSCRIPT TWO})")
-        tLabel.setToolTip("مدول الاستیسیته پی سطحی") 
+        EfLabel.setToolTip("مدول الاستیسیته پی سطحی") 
         self.foundationDimention_Part.addRow (EfLabel , self.Efoundation)
 
         IfLabel = QLabel (u"Iᶠ")
