@@ -1299,7 +1299,7 @@ class Module1(QWidget):
         self.foundationDimPart.addRow(Llabel, self.L)
         
         DBaselabel = QLabel("Dᵇᵃˢᵉ(m)")
-        DBaselabel.setToolTip("عمق لایه خاک")
+        DBaselabel.setToolTip("عمق مدفون پی")
         self.foundationDimPart.addRow(DBaselabel, self.DBase)
 
         etalabel = QLabel(u"\u03B7(degree)")
@@ -1551,7 +1551,7 @@ class Module1(QWidget):
         self.l4_d.textChanged.connect(self.enButton)
 
 
-        self.l4Box = QGroupBox("4ST LAYER CHARACTERISTIC")
+        self.l4Box = QGroupBox("4TH LAYER CHARACTERISTIC")
         self.l4Box.setStyleSheet(boxesStyle)
         self.l4Box.setAlignment(Qt.AlignCenter)
         self.l4Part = QFormLayout()
